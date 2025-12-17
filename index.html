@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MilkTimer - 母乳タイマーアプリ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .language-switcher {
+            text-align: right;
+            padding: 10px 0;
+        }
+
+        .language-switcher a {
+            color: #CC6699;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .language-switcher a:hover {
+            background-color: rgba(204, 102, 153, 0.1);
+        }
+
+        .language-switcher a.active {
+            background-color: #CC6699;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #CC6699;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #CC6699;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #FFB6C1;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #CC6699;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
+        }
+
+        .features {
+            display: grid;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            padding: 20px;
+            background: #FFF0F5;
+            border-radius: 10px;
+            border-left: 4px solid #FFB6C1;
+        }
+
+        .feature-icon {
+            font-size: 2em;
+            margin-right: 10px;
+        }
+
+        .feature-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #CC6699;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .download-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .app-store-badge img {
+            height: 60px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: #CC6699;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-switcher">
+            <a href="index.html" class="active">日本語</a>
+            <a href="index-en.html">English</a>
+        </div>
+
+        <header>
+            <div class="icon">🍼</div>
+            <h1>MilkTimer</h1>
+            <p class="subtitle">母乳タイマーアプリ / Breastfeeding Timer App</p>
+        </header>
+
+        <section>
+            <h2>アプリについて</h2>
+            <p>MilkTimerは、新生児を育てるお母さんのための授乳タイマーアプリです。左右で均等な時間授乳できるよう、シンプルで使いやすいタイマー機能を提供します。</p>
+            <p style="margin-top: 15px;">夜間の授乳時でも見やすい、目に優しい薄ピンクのデザインを採用。授乳中でも片手で簡単に操作できる、シンプルなインターフェースが特徴です。</p>
+        </section>
+
+        <section>
+            <h2>主な機能</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-title">
+                        <span class="feature-icon">⏱️</span>
+                        シンプルなタイマー機能
+                    </div>
+                    <div class="feature-description">
+                        授乳時間とインターバル時間を設定するだけ。自動的に左右の授乳時間を切り替えながら、連続して計測します。
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-title">
+                        <span class="feature-icon">🔔</span>
+                        通知音でお知らせ
+                    </div>
+                    <div class="feature-description">
+                        授乳時間が終了すると、優しい電子音でお知らせ。音のON/OFFも自由に設定できます。
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-title">
+                        <span class="feature-icon">💤</span>
+                        画面スリープ防止
+                    </div>
+                    <div class="feature-description">
+                        タイマー動作中は画面が暗くならないので、いつでも残り時間を確認できます。
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-title">
+                        <span class="feature-icon">⚙️</span>
+                        柔軟な設定
+                    </div>
+                    <div class="feature-description">
+                        授乳時間、インターバル時間を自由に設定可能。左右表示のON/OFF、開始側の選択など、お好みに合わせてカスタマイズできます。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>使い方</h2>
+            <h3>1. 時間を設定</h3>
+            <ul>
+                <li>授乳時間（デフォルト: 5分）を設定</li>
+                <li>インターバル時間（デフォルト: 20秒）を設定</li>
+            </ul>
+
+            <h3>2. オプション設定</h3>
+            <ul>
+                <li>左右表示: 授乳中にどちら側かを表示するか選択</li>
+                <li>開始側: 右・左のどちらから開始するか選択（左右表示ONの場合のみ）</li>
+                <li>通知音: 時間終了時の通知音のON/OFF</li>
+            </ul>
+
+            <h3>3. スタート</h3>
+            <ul>
+                <li>「開始 / Start」ボタンをタップ</li>
+                <li>タイマーが自動的に授乳 → インターバル → 授乳... と繰り返します</li>
+            </ul>
+
+            <h3>4. 停止</h3>
+            <ul>
+                <li>「ストップ / Stop」ボタンで終了</li>
+                <li>設定画面に戻ります</li>
+            </ul>
+        </section>
+
+        <section class="download-section">
+            <h2>ダウンロード</h2>
+            <p>App Storeで近日公開予定</p>
+            <!-- App Store公開後に以下を有効化
+            <a href="YOUR_APP_STORE_URL" class="app-store-badge" target="_blank">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+            -->
+        </section>
+
+        <footer>
+            <div class="footer-links">
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScuXUooN_TdtlfpDeAI7LQgeDO3WkmJU__KzwmUST7oU1XFbA/viewform" target="_blank">お問い合わせ</a>
+            </div>
+            <div class="contact-info">
+                <p>&copy; 2025 MilkTimer. All rights reserved.</p>
+                <p>開発者: Akihiro Hashimoto</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
